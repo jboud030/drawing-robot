@@ -5,12 +5,12 @@ Servo myservo;  // create servo object to control a servo
                 // twelve servo objects can be created on most boards
  
 int pos = 90;    // variable to store the servo position
-double now[2]={0,0}; //x and y
+float now[2]={0,0}; //x and y
 char input;
 int steps=200;
 int grid=20;
 long stsec=1000.0; //steps/sec
-int interval=110/grid; //mm
+float interval=110/grid; //mm
 AccelStepper Y(AccelStepper::FULL4WIRE,6,5,4,3);
 AccelStepper X(AccelStepper::FULL4WIRE,11,10,9,8);
 
