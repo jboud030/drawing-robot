@@ -8,7 +8,7 @@ float now[2]={0,0}; //x and y
 char input;
 int steps=200;
 int grid=20;
-long stsec=1000.0; //steps/sec
+long stsec=3000.0; //steps/sec
 float interval=110/grid; //mm
 AccelStepper Y(AccelStepper::FULL4WIRE,6,5,4,3);
 AccelStepper X(AccelStepper::FULL4WIRE,11,10,9,8);
