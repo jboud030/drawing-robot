@@ -1,7 +1,12 @@
-void movepoint(double now[],int interval,AccelStepper motorx,AccelStepper motory,int x,int y){
-  int resolution=200*20/25.4; //step/mm
-  int newx=x-now[0];
-  int newy=y-now[1];
+void movepoint(float now[],float interval,AccelStepper motorx,AccelStepper motory,float x,float y){
+  float resolution=200*20/25.4; //step/mm
+  
+  int grid=110/interval
+  if (x>grid) x=grid; //point will not be bigger then grid
+  if (y>grid) y=grid;
+  
+  float newx=x-now[0];
+  float newy=y-now[1];
   
   //Serial.println(newx);
   //Serial.println(newy);
